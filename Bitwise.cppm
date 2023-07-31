@@ -2,6 +2,7 @@ module;
 
 #include <cassert>
 #include <concepts>
+#include <cstddef>
 
 export module Bitwise;
 

@@ -8,7 +8,14 @@ endif()
 
 project ("BitwiseShenanigans")
 
-add_executable (BitwiseShenanigans "BitwiseShenanigans.cpp" "Bitwise.ixx")
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-set_property(TARGET BitwiseShenanigans PROPERTY CXX_STANDARD 20)
+include(cmake-modules/modules.cmake)
 
+add_module_library(Bitwise "Bitwise.cppm")
+
+add_executable (BitwiseShenanigans "BitwiseShenanigans.cpp")
+
+target_link_libraries(BitwiseShenanigans PRIVATE Bitwise)

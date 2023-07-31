@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 
 import Bitwise;
+#include <cstdint>
 
 int main()
 {
